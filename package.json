@@ -1,0 +1,38 @@
+{
+  "name": "hubot-outofcontext",
+  "description": "Store quotes from users and repeat them back at random times",
+  "version": "1.0.0",
+  "author": "Robert May <rob@afternoonrobot.co.uk>",
+  "license": "MIT",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robotmay/hubot-outofcontext.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/robotmay/hubot-outofcontext/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
+}
