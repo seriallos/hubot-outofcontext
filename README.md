@@ -1,35 +1,25 @@
-# Hubot Example
+# Hubot Out-of-Context
 
-An example script package for Hubot
+Store quotes and repeat them back to users at random times.
 
-[![Build Status](https://travis-ci.org/hubot-scripts/hubot-example.png)](https://travis-ci.org/hubot-scripts/hubot-example)
+## Installation
 
-## Directory Structure
+Add 'hubot-outofcontext' to your `package.json` file, e.g.
 
-Using the common directory structure for hubot script packages it will be easy
-to manage and allow others to easily contribute to your package.
+```json
+  "dependencies": {
+    "hubot":         "2.5.5",
+    "hubot-scripts": "2.4.6",
+    "hubot-outofcontext": "1.0.0",
+    "scraper":       "0.0.9",
+    "cheerio":       "0.7.0",
+    "gitio":         "1.0.1",
+    "cleverbot-node": "0.1.1",
+    "htmlparser":    "1.7.6",
+    "soupselect":    "0.2.0",
+    "jsdom":         "0.2.14",
+    "underscore":    "1.3.3"
+  }
+```
 
-### script
-
-This directory is home to a couple of development scripts; `bootstrap` and `test`
-they're used to bootstrap the development environment and run tests
-respectively.
-
-### src
-
-This directory is home to the actual hubot scripts in the package. Your
-`index.coffee` entry point will load the scripts from this directory.
-
-### test
-
-This directory is home to any tests you write for your scripts. This example
-package uses Mocha, Chai and Sinon to manage writing tests.
-
-## Advantages of Building a Package
-
-Some of the advantages of building an npm package for your hubot script(s) are:
-
-* You don't need to rely on when hubot-scripts package is released.
-* You can specify dependencies in the `package.json` rather than have users
-  manually specify them
-* You can easily add tests using your favourite frameworks and libraries
+Then add 'hubot-outofcontext' to your `external_scripts.json` file and run `npm install`.
