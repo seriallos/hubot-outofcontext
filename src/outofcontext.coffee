@@ -1,3 +1,22 @@
+# Description:
+#   Store a quote from a user, repeat it back to them at random times out of context.
+#   Has a 1 in 200 (ish?) chance of delivering a quote whenever a person speaks.
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot outofcontext <user name>: <message> - add a quote for a user
+#   hubot ooc <user name>: <message> - add a quote for a user
+#   hubot outofcontext rm <user name>: <message> - remove a quote for a user
+#   hubot ooc rm <user name>: <message> - remove a quote for a user
+#
+# Author:
+#   robotmay
+
 appendQuote = (data, user, message) ->
   data[user.name] or= []
   data[user.name].push message
