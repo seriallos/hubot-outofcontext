@@ -1,7 +1,7 @@
 {
   "name": "hubot-outofcontext",
   "description": "Store quotes from users and repeat them back at random times",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Robert May <rob@afternoonrobot.co.uk>",
   "license": "MIT",
 

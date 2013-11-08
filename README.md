@@ -10,7 +10,7 @@ Add 'hubot-outofcontext' to your `package.json` file, e.g.
   "dependencies": {
     "hubot":         "2.5.5",
     "hubot-scripts": "2.4.6",
-    "hubot-outofcontext": "1.0.0",
+    "hubot-outofcontext": "1.0.1",
     "scraper":       "0.0.9",
     "cheerio":       "0.7.0",
     "gitio":         "1.0.1",
