@@ -34,7 +34,15 @@ findUser = (robot, msg, name, callback) ->
     msg.send "Too many users like that"
   else
     msg.send "#{name}? Never heard of 'em"
-  
+
+randomQuote = (data) ->
+  quotes = []
+  for user, userQuotes of data
+    for quote in userQuotes
+      quotes.push "\"#{quote}\" - #{user}"
+  return quotes[Math.floor(Math.random() * quotes.length)]
+
+
 module.exports = (robot) ->
   robot.brain.on 'loaded', =>
     robot.brain.data.oocQuotes ||= {}
@@ -48,12 +56,9 @@ module.exports = (robot) ->
     findUser robot, msg, msg.match[1], (user) ->
       removeQuote(robot.brain.data.oocQuotes, user, msg.match[2])
       msg.send "Quote has been removed from historical records."
-  
+
   robot.hear /./i, (msg) ->
     return unless robot.brain.data.oocQuotes?
-    if (quotes = robot.brain.data.oocQuotes[msg.message.user.name])
-      randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
-
-      if Math.floor(Math.random() * 200) == 42
-        msg.send "\"#{randomQuote}\" - #{msg.message.user.name}"
+    if Math.floor(Math.random() * 200) == 42
+      msg.send randomQuote(robot.brain.data.oocQuotes)
 
